@@ -42,7 +42,7 @@ public abstract class IWrapper {
 
         try {
             IClassGenerator cg = new IClassGenerator();
-            cg.setClassName((Modifier.isPublic(c.getModifiers()) ? IWrapper.class.getName() : c.getName() + "$sw") + id);
+            cg.setClassName((Modifier.isPublic(c.getModifiers()) ? IWrapper.class.getName() : c.getName()) + id);
             cg.setSuperClassName(IWrapper.class.getName());
             cg.addField("public static String[] pns;");
             cg.addMethod("public String[] getPropertyNames() { return pns; }");

@@ -8,12 +8,27 @@ public class IWrapperTest {
 
     @Test
     public void getWrapper() {
-        String[] pns = IWrapper.getWrapper(User.class).getPropertyNames();
+        IWrapper wrapper = IWrapper.getWrapper(User.class);
+        String[] pns = wrapper.getPropertyNames();
+        System.out.println(wrapper.getClass().getName());
         System.out.println(Arrays.asList(pns));
     }
-}
 
-class User {
-    public Integer id;
-    public String name;
+    @Test
+    public void getWrapper2() {
+        IWrapper wrapper = IWrapper.getWrapper(User2.class);
+        String[] pns = wrapper.getPropertyNames();
+        System.out.println(wrapper.getClass().getName());
+        System.out.println(Arrays.asList(pns));
+    }
+
+    private class User {
+        public Integer id;
+        public String name;
+    }
+
+    public class User2 {
+        public Integer id;
+        public String name;
+    }
 }
