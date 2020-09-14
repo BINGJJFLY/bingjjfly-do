@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-rmi-do</module>
+        <module>hessian-do</module>
+        <module>jj</module>
+        <module>spring-hessian-do</module>
     </modules>
 
     <dependencies>
