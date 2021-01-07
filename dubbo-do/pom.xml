@@ -13,6 +13,7 @@
         <module>hessian-do</module>
         <module>jj</module>
         <module>spring-hessian-do</module>
+        <module>just-do</module>
     </modules>
 
     <dependencies>
